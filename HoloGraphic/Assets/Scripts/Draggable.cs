@@ -9,13 +9,15 @@ public class Draggable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
 
     public void OnBeginDrag(PointerEventData eventData) {
         Debug.Log("YOB");
+        
+        //eventData.dragging
 
         parentToReturnTo = this.transform.parent;
         this.transform.SetParent(this.transform.parent.parent);
 
         GetComponent<CanvasGroup>().blocksRaycasts = false;
     }
-
+    
     public void OnDrag(PointerEventData eventData) {
         Debug.Log("YOD");
 
