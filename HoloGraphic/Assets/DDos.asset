@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: af0b129dd5478504a81a8512f901fab7, type: 3}
-  m_Name: Dos
+  m_Name: DDos
   m_EditorClassIdentifier: 
-  name: Dos
+  name: DDos
   description: Use a Denial of Service attack to inflict 20 damage.
   artwork: {fileID: 0}
   memoryCost: 10
