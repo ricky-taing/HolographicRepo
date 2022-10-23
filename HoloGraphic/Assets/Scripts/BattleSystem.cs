@@ -5,7 +5,7 @@ using UnityEngine;
 public class BattleSystem : MonoBehaviour
 {
     //Game Dev Experiment Tutorial on Youtube
-
+    //Scriptable obj for enemies? But then no inheritance right?
     //void Start()
     //{
     //    SetupBattle();
