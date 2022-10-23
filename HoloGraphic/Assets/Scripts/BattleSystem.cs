@@ -5,6 +5,14 @@ using UnityEngine;
 public class BattleSystem : MonoBehaviour
 {
     //Game Dev Experiment Tutorial on Youtube
+
+    //void Start()
+    //{
+    //    SetupBattle();
+    //}
+
+    //1. Turn based system
+    //2. call this method
     public void performPlayerMove(Enemy enemy, Card card)
     {
         bool isDead = enemy.takeDamage(card);
@@ -14,10 +22,10 @@ public class BattleSystem : MonoBehaviour
             //Update UI, remove the enemy from the field, return user to first person POV (?), etc.
             Debug.Log("You have defeated the enemy!");
         }
-        else
-        {
-            enemy.Attack();
-        }
+        //else
+        //{
+        //    enemy.Attack();
+        //}
     }
 
     //What is IEnumerator?

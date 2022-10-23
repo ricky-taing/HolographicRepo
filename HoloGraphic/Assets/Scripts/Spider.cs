@@ -6,10 +6,10 @@ public class Spider : Enemy
 {
     public Player player;
 
+    //Should we use methods or scriptable obj for moves? Our moves don't have stats like accuracy, energy (for enemies) yet so method I think
     //small attack
     public void Bite(Player player) //Or card??
     {
-        //How to apply this number y amount of times?
         int randomNum = Random.Range(1, 5);
         for(int i = randomNum; i > 0; i--)
         {

@@ -14,9 +14,11 @@ public class Enemy : MonoBehaviour
     //Do diff enemies have diff attack stats?
     public int attack;
     public int defense;
+    //MaxHP, curHP?
     public int health;
     private ArrayList Moves;
 
+    //Make abstract? That way we call this and it calls random move from child?
     //public int Attack()
     //{
     //    Debug.Log("Attack!");
