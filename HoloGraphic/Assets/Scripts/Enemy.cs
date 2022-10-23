@@ -10,29 +10,43 @@ public class Enemy : MonoBehaviour
 
     public Sprite artwork;
 
-    public int attack; //This is a modifier to actual attacks?
+    //This is a modifier to actual attacks?
+    //Do diff enemies have diff attack stats?
+    public int attack;
     public int defense;
     public int health;
-    public int Attack()
-    {
-        Debug.Log("Attack!");
-        return attack;
-    }
+    private ArrayList Moves;
 
+    //public int Attack()
+    //{
+    //    Debug.Log("Attack!");
+    //    return attack;
+    //}
+
+    //Game Dev Experiments Tutorial Youtube
     public bool takeDamage(Card card) //Move move, Player player
     {
+        //Or can call card.specialAttack, except that enemy moves are random. What is Moves in the tutorial? A list?
         health -= card.Attack();
 
         if (health <= 0)
         {
             health = 0;
-            //return true;
+            return true;
         }
         return false;
     }
 
-    //public void specialAttack()
+    //Try use 1 move first before adding more
+    //public Move getRandomMove()
     //{
-    //    Debug.Log("Launching Special Attack!");
+    //    int r = Random.Range(0, Moves.Count);
+    //    return Moves[r];
+    //}
+
+   //public void getRandomMove()
+    //{
+     //   int r = Random.Range(0, Moves.Count);
+      //  return Moves[r];
     //}
 }
