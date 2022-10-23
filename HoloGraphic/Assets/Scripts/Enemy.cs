@@ -10,13 +10,25 @@ public class Enemy : MonoBehaviour
 
     public Sprite artwork;
 
-    public int attack;
+    public int attack; //This is a modifier to actual attacks?
     public int defense;
     public int health;
-    public string specialAttack;
-    public void Attack()
+    public int Attack()
     {
         Debug.Log("Attack!");
+        return attack;
+    }
+
+    public bool takeDamage(Card card) //Move move, Player player
+    {
+        health -= card.Attack();
+
+        if (health <= 0)
+        {
+            health = 0;
+            //return true;
+        }
+        return false;
     }
 
     //public void specialAttack()
