@@ -15,8 +15,19 @@ public class Card : ScriptableObject
     public int defense;
     public int health;
 
+    //I don't think enemy should be attached to a card...
+    //public Enemy enemy;
+
     public void Print()
     {
         Debug.Log(name + ": " + description);
     }
+
+    public int Attack()
+    {
+        Debug.Log("Attack!");
+        return attack;
+        //enemy.health -= attack;
+    }
+    
 }
