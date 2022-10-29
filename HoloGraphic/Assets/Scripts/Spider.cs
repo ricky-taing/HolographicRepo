@@ -13,7 +13,7 @@ public class Spider : Enemy
         int randomNum = Random.Range(1, 5);
         for(int i = randomNum; i > 0; i--)
         {
-            player.health -= 10;
+            player.curHealth -= 10;
         }
         //return 10;
     }

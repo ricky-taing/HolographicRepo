@@ -2,14 +2,37 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum BattleState { START, PLAYERTURN, ENEMYTURN, WON, LOST }
 public class BattleSystem : MonoBehaviour
 {
     //Game Dev Experiment Tutorial on Youtube
     //Scriptable obj for enemies? But then no inheritance right?
-    //void Start()
-    //{
-    //    SetupBattle();
-    //}
+
+    public Player playerPrefab;
+    public Enemy enemyPrefab;
+
+    public Transform playerPos; //Instead of "platforms" where player and enemy would stand, pass in the draggable zones for these var?
+    public Transform enemyPos;
+
+    //Unit playerUnit;
+    //Unit enemyUnit;
+
+    public BattleState state;
+    
+    void Start()
+    {
+        state = BattleState.START;
+        SetupBattle();
+    }
+
+    void SetupBattle()
+    {
+        Debug.Log("hi");
+        //GameObject playerGO = Instantiate(player, playerPos); //Spawning in units
+        Player playerGO = Instantiate(playerPrefab, playerPos);
+        //playerGO.GetComponent<Unit>();
+        Instantiate(enemyPrefab, enemyPos);
+    }
 
     //1. Turn based system
     //2. call this method
