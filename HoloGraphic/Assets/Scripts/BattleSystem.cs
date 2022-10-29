@@ -48,9 +48,10 @@ public class BattleSystem : MonoBehaviour
     //How to reference a card from Player hand to attack?
     IEnumerator PlayerAttack()
     {
+        bool isDead = false;
         //Damage the enemy
         Enemy enemy = enemyPrefab;
-        bool isDead = enemy.takeDamage(card);
+        //isDead = enemy.takeDamage(card);
         yield return new WaitForSeconds(2f);
 
         if (isDead)
