@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    public string name;
     public int maxHealth;
     public int curHealth;
     public Card[] hand;

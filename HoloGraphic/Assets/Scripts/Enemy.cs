@@ -15,7 +15,8 @@ public class Enemy : MonoBehaviour
     public int attack;
     public int defense;
     //MaxHP, curHP?
-    public int health;
+    public int maxHealth;
+    public int curHealth;
     private ArrayList Moves;
 
     //Make abstract? That way we call this and it calls random move from child?
@@ -29,11 +30,11 @@ public class Enemy : MonoBehaviour
     public bool takeDamage(Card card) //Move move, Player player
     {
         //Or can call card.specialAttack, except that enemy moves are random. What is Moves in the tutorial? A list?
-        health -= card.Attack();
+        curHealth -= card.Attack();
 
-        if (health <= 0)
+        if (curHealth <= 0)
         {
-            health = 0;
+            curHealth = 0;
             return true;
         }
         return false;

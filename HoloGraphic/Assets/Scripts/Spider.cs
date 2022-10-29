@@ -32,7 +32,7 @@ public class Spider : Enemy
     public int Siphon()
     {
         Debug.Log("Mmm so tasty!");
-        health += (attack + 10); // This is the base damage Siphon does, for now + Attack stat modifier
+        curHealth += (attack + 10); // This is the base damage Siphon does, for now + Attack stat modifier
          return attack + 10;
     }
 }

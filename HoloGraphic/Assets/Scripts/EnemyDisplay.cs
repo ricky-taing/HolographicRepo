@@ -21,6 +21,6 @@ public class EnemyDisplay : MonoBehaviour
     {
         
         nameText.text = enemy.name;
-        healthText.text = enemy.health.ToString();
+        healthText.text = enemy.curHealth.ToString();
     }
 }
