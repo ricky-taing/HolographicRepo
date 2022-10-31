@@ -13,8 +13,8 @@ public class BattleSystem : MonoBehaviour
     public Enemy enemyPrefab;
     Player player;
     Enemy enemy;
-    private Card card; // We don't pass in a card, so how do we reference card for enemy to take damage?
-    //public Card card;
+    //private Card card; // We don't pass in a card, so how do we reference card for enemy to take damage?
+    public Card card;
 
     //Instead of "platforms" where player and enemy would stand, pass in the draggable zones for these var?
     public Transform playerPos;
@@ -35,6 +35,7 @@ public class BattleSystem : MonoBehaviour
 
     IEnumerator SetupBattle()
     {
+        //How does instantiate work? Why does it need a prefab arg?
         player = Instantiate(playerPrefab, playerPos);
 
         enemy = Instantiate(enemyPrefab, enemyPos);
@@ -52,12 +53,15 @@ public class BattleSystem : MonoBehaviour
     IEnumerator PlayerAttack()
     {
         card = player.hand[0];
+        //card = player.hand.g
         Debug.Log(card.name);
         bool isDead = false;
         isDead = enemy.takeDamage(card);
 
         enemyHUD.SetHP(enemy.curHealth);
         dialogueText.text = "The attack is successful";
+
+        Debug.Log("We get to this point in code");
 
         yield return new WaitForSeconds(2f);
 

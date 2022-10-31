@@ -27,6 +27,6 @@ public class CardDisplay : MonoBehaviour
 
         memoryText.text = card.memoryCost.ToString();
         attackText.text = card.attack.ToString();
-        healthText.text = card.health.ToString();
+        healthText.text = card.curHealth.ToString();
     }
 }
