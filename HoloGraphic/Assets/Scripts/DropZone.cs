@@ -16,6 +16,14 @@ public class DropZone : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPoin
     public void OnDrop(PointerEventData eventData) {
         Debug.Log(eventData.pointerDrag.name + " was dropped on " + gameObject.name);
 
+        // if (gameObject.name == "Tabletop")
+        //     activate card effect
+        //     if (card type == self heal)
+        //         heal player
+        //     if (card type == dmg)
+        //         dmg enemy
+        //     etc.
+        
         Draggable d = eventData.pointerDrag.GetComponent<Draggable>();
         if (d != null) {
             d.parentToReturnTo = this.transform;
