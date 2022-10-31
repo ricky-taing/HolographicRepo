@@ -11,8 +11,13 @@ public class BattleSystem : MonoBehaviour
 
     public Player playerPrefab;
     public Enemy enemyPrefab;
+    Player player;
+    Enemy enemy;
+    private Card card; // We don't pass in a card, so how do we reference card for enemy to take damage?
+    //public Card card;
 
-    public Transform playerPos; //Instead of "platforms" where player and enemy would stand, pass in the draggable zones for these var?
+    //Instead of "platforms" where player and enemy would stand, pass in the draggable zones for these var?
+    public Transform playerPos;
     public Transform enemyPos;
 
     public Text dialogueText;
@@ -30,10 +35,9 @@ public class BattleSystem : MonoBehaviour
 
     IEnumerator SetupBattle()
     {
-        Player player = Instantiate(playerPrefab, playerPos);
+        player = Instantiate(playerPrefab, playerPos);
 
-        Enemy enemy = Instantiate(enemyPrefab, enemyPos);
-        //dialogueText.text = enemy.name;
+        enemy = Instantiate(enemyPrefab, enemyPos);
 
         //playerHUD.SetHUD(player);
         //enemyHUD.SetHUD(enemy);
@@ -45,13 +49,16 @@ public class BattleSystem : MonoBehaviour
     }
 
     //Have to implement our cards and dragging into attack
-    //How to reference a card from Player hand to attack?
     IEnumerator PlayerAttack()
     {
+        card = player.hand[0];
+        Debug.Log(card.name);
         bool isDead = false;
-        //Damage the enemy
-        Enemy enemy = enemyPrefab;
-        //isDead = enemy.takeDamage(card);
+        isDead = enemy.takeDamage(card);
+
+        enemyHUD.SetHP(enemy.curHealth);
+        dialogueText.text = "The attack is successful";
+
         yield return new WaitForSeconds(2f);
 
         if (isDead)
@@ -59,12 +66,44 @@ public class BattleSystem : MonoBehaviour
             //End the battle
             //Update UI, remove the enemy from the field, return user to first person POV (?), etc.
             Debug.Log("You have defeated the enemy!");
+            state = BattleState.WON;
+            EndBattle();
         }
-        //else
-        //{
-        //    Enemy Turn
-        //    enemy.Attack();
-        //}
+        else
+        {
+            state = BattleState.ENEMYTURN;
+            StartCoroutine(EnemyTurn());
+        }
+    }
+
+    IEnumerator EnemyTurn()
+    {
+        dialogueText.text = enemy.name + " attacks!";
+        yield return new WaitForSeconds(1f);
+        bool isDead = player.takeDamage(enemy); //Change to enemy random attack here
+        playerHUD.SetHP(player.curHealth);
+        yield return new WaitForSeconds(1f);
+        if (isDead)
+        {
+            state = BattleState.LOST;
+            EndBattle();
+        }
+        else
+        {
+            state = BattleState.PLAYERTURN;
+            PlayerTurn();
+        }
+    }
+
+    void EndBattle()
+    {
+        if(state == BattleState.WON)
+        {
+            dialogueText.text = "You won the battle!";
+        } else if (state == BattleState.LOST)
+        {
+            dialogueText.text = "You were defeated.";
+        }
     }
     void PlayerTurn()
     {

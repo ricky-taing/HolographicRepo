@@ -20,11 +20,11 @@ public class Enemy : MonoBehaviour
     private ArrayList Moves;
 
     //Make abstract? That way we call this and it calls random move from child?
-    //public int Attack()
-    //{
-    //    Debug.Log("Attack!");
-    //    return attack;
-    //}
+    public int Attack()
+    {
+        Debug.Log("Attack!");
+        return attack;
+    }
 
     //Game Dev Experiments Tutorial Youtube
     public bool takeDamage(Card card) //Move move, Player player

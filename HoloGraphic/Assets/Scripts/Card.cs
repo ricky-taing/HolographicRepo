@@ -29,5 +29,7 @@ public class Card : ScriptableObject
         return attack;
         //enemy.health -= attack;
     }
+
+
     
 }

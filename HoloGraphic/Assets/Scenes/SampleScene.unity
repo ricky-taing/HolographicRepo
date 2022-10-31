@@ -5253,6 +5253,12 @@ PrefabInstance:
       propertyPath: maxHealth
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 5472418906273918437, guid: 765f01cfad3823648b7d2d8114329f88,
+        type: 3}
+      propertyPath: hand.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 75807121e34a4e64eb7e41bcc318cd07,
+        type: 2}
     - target: {fileID: 5472418906273918459, guid: 765f01cfad3823648b7d2d8114329f88,
         type: 3}
       propertyPath: m_Name
