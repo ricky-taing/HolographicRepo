@@ -16,7 +16,6 @@ public class BattleSystem : MonoBehaviour
     //private Card card; // We don't pass in a card, so how do we reference card for enemy to take damage?
     public Card card;
 
-    //Instead of "platforms" where player and enemy would stand, pass in the draggable zones for these var?
     public Transform playerPos;
     public Transform enemyPos;
 
@@ -33,12 +32,24 @@ public class BattleSystem : MonoBehaviour
         StartCoroutine(SetupBattle());
     }
 
+    //Spawns player, enemies and starts player turn
     IEnumerator SetupBattle()
     {
-        //How does instantiate work? Why does it need a prefab arg?
         player = Instantiate(playerPrefab, playerPos);
 
         enemy = Instantiate(enemyPrefab, enemyPos);
+
+        Spider spider = new Spider(2, 10);
+        List<Enemy> enemyList = new List<Enemy>();
+        enemyList.Add(spider);
+        //enemyList.Add(Warden);
+
+        foreach (Enemy enemy in enemyList)
+        {
+            enemyPrefab = enemy;
+            //enemyPos = HorizontalLayoutGroup
+            Instantiate(enemyPrefab, enemyPos);
+        }
 
         //playerHUD.SetHUD(player);
         //enemyHUD.SetHUD(enemy);
@@ -80,6 +91,21 @@ public class BattleSystem : MonoBehaviour
         }
     }
 
+    //if using buttons
+    public void OnAttackButton()
+    {
+        if (state != BattleState.PLAYERTURN)
+        {
+            return;
+        }
+        StartCoroutine(PlayerAttack());
+    }
+
+    void PlayerTurn()
+    {
+        dialogueText.text = "Choose an action:";
+    }
+
     IEnumerator EnemyTurn()
     {
         dialogueText.text = enemy.name + " attacks!";
@@ -99,50 +125,20 @@ public class BattleSystem : MonoBehaviour
         }
     }
 
-    void EndBattle()
-    {
-        if(state == BattleState.WON)
-        {
-            dialogueText.text = "You won the battle!";
-        } else if (state == BattleState.LOST)
-        {
-            dialogueText.text = "You were defeated.";
-        }
-    }
-    void PlayerTurn()
-    {
-        dialogueText.text = "Choose an action:";
-    }
-
-    //if using buttons
-    public void OnAttackButton()
-    {
-        if (state != BattleState.PLAYERTURN)
-        {
-            return;
-        }
-        StartCoroutine(PlayerAttack());
-    }
-
-    //1. Turn based system
-    //2. call this method
-    /*public void performPlayerMove(Enemy enemy, Card card)
-    {
-        bool isDead = enemy.takeDamage(card);
-
-        if (isDead)
-        {
-            //Update UI, remove the enemy from the field, return user to first person POV (?), etc.
-            Debug.Log("You have defeated the enemy!");
-        }
-        //else
-        //{
-        //    enemy.Attack();
-        //}
-    }*/
-
     public void endTurn()
     {
         Debug.Log("Ending turn.");
+    }
+
+    void EndBattle()
+    {
+        if (state == BattleState.WON)
+        {
+            dialogueText.text = "You won the battle!";
+        }
+        else if (state == BattleState.LOST)
+        {
+            dialogueText.text = "You were defeated.";
+        }
     }
 }

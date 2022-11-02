@@ -7,7 +7,14 @@ public class Spider : Enemy
     public Player player;
 
     //Should we use methods or scriptable obj for moves? Our moves don't have stats like accuracy, energy (for enemies) yet so method I think
-    //small attack
+
+    public Spider(int attack, int maxHealth)
+    {
+        attack = this.attack;
+        maxHealth = this.maxHealth;
+    }
+
+    //Small attack
     public void Bite(Player player) //Or card??
     {
         int randomNum = Random.Range(1, 5);

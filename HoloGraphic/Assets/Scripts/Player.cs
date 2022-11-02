@@ -8,13 +8,13 @@ public class Player : MonoBehaviour
     public int maxHealth;
     public int curHealth;
 
-    public Card[] hand;
-    //public Card[] deck;
-    //public ArrayList hand = new ArrayList(); //Should only be allowed 5 cards
-    public ArrayList deck = new ArrayList();
+    public List<Card> hand = new List<Card>();
+    public List<Card> deck = new List<Card>();
 
     void Start()
     {
+        hand.Capacity = 5;
+
         Card gratis = new Card();
         gratis.setName("Gratis");
         gratis.setAttack(5);
@@ -22,8 +22,8 @@ public class Player : MonoBehaviour
 
         //deck.Add(gratis);
 
-        //hand.Add(gratis);
-        hand = new Card[] {gratis};
+        hand.Add(gratis);
+        //hand = new Card[] {gratis};
 
         //When make 5 cards to add
         /*for (int i = 0; i < 5; i++) {

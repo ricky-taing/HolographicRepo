@@ -98,7 +98,8 @@ MonoBehaviour:
   artwork: {fileID: 0}
   attack: 10
   defense: 10
-  health: 50
+  maxHealth: 25
+  curHealth: 0
   player: {fileID: 0}
 --- !u!114 &2275810726338335598
 MonoBehaviour:

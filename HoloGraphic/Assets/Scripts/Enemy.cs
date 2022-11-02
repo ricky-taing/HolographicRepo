@@ -11,7 +11,7 @@ public class Enemy : MonoBehaviour
     public Sprite artwork;
 
     //This is a modifier to actual attacks?
-    //Do diff enemies have diff attack stats?
+    //Different enemies will have different attack stats
     public int attack;
     public int defense;
     //MaxHP, curHP?
