@@ -15,9 +15,9 @@ MonoBehaviour:
   characterID: enemy_1
   characterName: Enemy 1
   characterDescription: Enemy Description
-  maxHealth: 50
+  maxHealth: 10
   enemyPrefab: {fileID: 243822687015991123, guid: c973aeb67e007d54c97fd480d7f50773, type: 3}
-  followAbilityPattern: 1
+  followAbilityPattern: 0
   enemyAbilityList:
   - name: Attack Single
     intention: {fileID: 11400000, guid: 2af475f5121b73d4c99b67551230aa48, type: 2}
@@ -26,10 +26,3 @@ MonoBehaviour:
     - actionType: 0
       minActionValue: 6
       maxActionValue: 6
-  - name: Block
-    intention: {fileID: 11400000, guid: b0b1e7f2f78bb444eb1666e4accf22ee, type: 2}
-    hideActionValue: 0
-    actionList:
-    - actionType: 3
-      minActionValue: 5
-      maxActionValue: 8

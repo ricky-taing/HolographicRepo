@@ -10,20 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c6903f06e96c43789549f142f8956d64, type: 3}
-  m_Name: 3-Block_Basic
+  m_Name: Infect_Card
   m_EditorClassIdentifier: 
-  id: 3_block_basic
-  cardName: Basic block
+  id: infect_card
+  cardName: Infect
   manaCost: 1
-  cardSprite: {fileID: -1513487178384027574, guid: a707003c96586cc41b22ae32a9cdb636, type: 3}
-  usableWithoutTarget: 1
+  cardSprite: {fileID: 0}
+  rarity: 0
+  usableWithoutTarget: 0
+  exhaustAfterPlay: 0
   cardActionDataList:
-  - cardActionType: 2
-    actionTargetType: 1
-    actionValue: 5
+  - cardActionType: 0
+    actionTargetType: 0
+    actionValue: 3
     actionDelay: 0
   cardDescriptionDataList:
-  - descriptionText: 'Gain '
+  - descriptionText: 'Deals '
     enableOverrideColor: 0
     overrideColor: {r: 0, g: 0, b: 0, a: 1}
     useModifier: 0
@@ -34,14 +36,14 @@ MonoBehaviour:
     overrideColorOnValueScaled: 0
   - descriptionText: 
     enableOverrideColor: 1
-    overrideColor: {r: 0, g: 0.41176474, b: 0.6666667, a: 1}
+    overrideColor: {r: 0.7686275, g: 0.14117648, b: 0.18823531, a: 1}
     useModifier: 1
     modifiedActionValueIndex: 0
-    modiferStats: 0
+    modiferStats: 2
     usePrefixOnModifiedValue: 1
     modifiedValuePrefix: '*'
     overrideColorOnValueScaled: 1
-  - descriptionText: ' block'
+  - descriptionText: ' damage'
     enableOverrideColor: 0
     overrideColor: {r: 0, g: 0, b: 0, a: 1}
     useModifier: 0
@@ -50,5 +52,5 @@ MonoBehaviour:
     usePrefixOnModifiedValue: 0
     modifiedValuePrefix: '*'
     overrideColorOnValueScaled: 0
-  specialKeywordsList: 00000000
-  audioType: 2
+  specialKeywordsList: 
+  audioType: 0
