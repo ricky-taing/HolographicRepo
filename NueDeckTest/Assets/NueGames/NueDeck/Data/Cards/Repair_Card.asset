@@ -10,20 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c6903f06e96c43789549f142f8956d64, type: 3}
-  m_Name: 4-Draw_Basic
+  m_Name: Repair_Card
   m_EditorClassIdentifier: 
-  id: 4_draw_basic
-  cardName: Basic draw
-  manaCost: 0
-  cardSprite: {fileID: 21300000, guid: 6d79f0e0e016ca64592cdb3293bf37da, type: 3}
+  id: repair_card
+  cardName: Repair
+  manaCost: 1
+  cardSprite: {fileID: 0}
+  rarity: 0
   usableWithoutTarget: 1
+  exhaustAfterPlay: 0
   cardActionDataList:
-  - cardActionType: 5
+  - cardActionType: 1
     actionTargetType: 1
-    actionValue: 2
+    actionValue: 5
     actionDelay: 0
   cardDescriptionDataList:
-  - descriptionText: 'Draw '
+  - descriptionText: 'Recovers '
     enableOverrideColor: 0
     overrideColor: {r: 0, g: 0, b: 0, a: 1}
     useModifier: 0
@@ -41,7 +43,7 @@ MonoBehaviour:
     usePrefixOnModifiedValue: 0
     modifiedValuePrefix: '*'
     overrideColorOnValueScaled: 0
-  - descriptionText: ' cards'
+  - descriptionText: ' health'
     enableOverrideColor: 0
     overrideColor: {r: 0, g: 0, b: 0, a: 1}
     useModifier: 0
@@ -51,4 +53,4 @@ MonoBehaviour:
     modifiedValuePrefix: '*'
     overrideColorOnValueScaled: 0
   specialKeywordsList: 
-  audioType: 4
+  audioType: 7

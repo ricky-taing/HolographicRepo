@@ -10,20 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c6903f06e96c43789549f142f8956d64, type: 3}
-  m_Name: 5-Heal_Basic
+  m_Name: Extract_Card
   m_EditorClassIdentifier: 
-  id: 5_heal_basic
-  cardName: Basic heal
+  id: extract_card
+  cardName: Extract
   manaCost: 1
-  cardSprite: {fileID: 21300000, guid: f071ce71140638f469d6a10acc1a1b67, type: 3}
+  cardSprite: {fileID: 0}
+  rarity: 0
   usableWithoutTarget: 1
+  exhaustAfterPlay: 0
   cardActionDataList:
-  - cardActionType: 1
+  - cardActionType: 6
     actionTargetType: 1
-    actionValue: 3
+    actionValue: 5
     actionDelay: 0
   cardDescriptionDataList:
-  - descriptionText: 'Heal '
+  - descriptionText: 'Extract '
     enableOverrideColor: 0
     overrideColor: {r: 0, g: 0, b: 0, a: 1}
     useModifier: 0
@@ -41,5 +43,14 @@ MonoBehaviour:
     usePrefixOnModifiedValue: 0
     modifiedValuePrefix: '*'
     overrideColorOnValueScaled: 0
+  - descriptionText: ' EXP'
+    enableOverrideColor: 0
+    overrideColor: {r: 0, g: 0, b: 0, a: 1}
+    useModifier: 0
+    modifiedActionValueIndex: 0
+    modiferStats: 0
+    usePrefixOnModifiedValue: 0
+    modifiedValuePrefix: '*'
+    overrideColorOnValueScaled: 0
   specialKeywordsList: 
-  audioType: 7
+  audioType: 4
