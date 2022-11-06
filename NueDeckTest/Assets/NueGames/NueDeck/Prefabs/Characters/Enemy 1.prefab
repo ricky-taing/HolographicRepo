@@ -314,6 +314,10 @@ PrefabInstance:
       value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2911335580396430737, guid: 4a531535fdf794e4893297aa72798b93, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2911335580396430737, guid: 4a531535fdf794e4893297aa72798b93, type: 3}
       propertyPath: m_fontAsset
       value: 
       objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -422,16 +426,28 @@ PrefabInstance:
       value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6775776604672554816, guid: 4a531535fdf794e4893297aa72798b93, type: 3}
+      propertyPath: m_fontSize
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6775776604672554816, guid: 4a531535fdf794e4893297aa72798b93, type: 3}
       propertyPath: m_fontAsset
       value: 
-      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+      objectReference: {fileID: 11400000, guid: 113c17d283d8c4e428a2ecf0f5b74cc4, type: 2}
+    - target: {fileID: 6775776604672554816, guid: 4a531535fdf794e4893297aa72798b93, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 6775776604672554816, guid: 4a531535fdf794e4893297aa72798b93, type: 3}
       propertyPath: m_sharedMaterial
       value: 
-      objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+      objectReference: {fileID: -4210367109243107215, guid: 113c17d283d8c4e428a2ecf0f5b74cc4, type: 2}
     - target: {fileID: 7717519892667723655, guid: 4a531535fdf794e4893297aa72798b93, type: 3}
       propertyPath: m_Layer
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7717519892667723655, guid: 4a531535fdf794e4893297aa72798b93, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8104649149807962751, guid: 4a531535fdf794e4893297aa72798b93, type: 3}
       propertyPath: m_Layer
@@ -440,6 +456,10 @@ PrefabInstance:
     - target: {fileID: 8398393614889999489, guid: 4a531535fdf794e4893297aa72798b93, type: 3}
       propertyPath: m_Layer
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8576760959144301459, guid: 4a531535fdf794e4893297aa72798b93, type: 3}
+      propertyPath: m_Color.a
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4a531535fdf794e4893297aa72798b93, type: 3}
