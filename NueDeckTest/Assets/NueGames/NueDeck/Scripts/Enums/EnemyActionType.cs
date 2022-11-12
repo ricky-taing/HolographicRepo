@@ -3,6 +3,7 @@
     public enum EnemyActionType
     {
         Attack,
+        Infect,
         Heal,
         Poison,
         Block
