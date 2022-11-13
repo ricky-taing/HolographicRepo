@@ -19,6 +19,8 @@ namespace NueGames.NueDeck.Scripts.Managers
         [SerializeField] private BackgroundContainer backgroundContainer;
         [SerializeField] private List<Transform> enemyPosList;
         public CharacterBase infectionTargetAlly;
+        public CharacterBase infectionTargetEnemy;
+        public int infectPlayerValue;
         public int infectEnemyValue;
         [SerializeField] private List<Transform> allyPosList;
  
@@ -101,6 +103,7 @@ namespace NueGames.NueDeck.Scripts.Managers
                     if (GameManager.infectionCounterAlly > 0 && GameManager.infectionCounterAlly<3)
                     {
                         infectionTargetAlly.CharacterStats.Damage(infectEnemyValue);
+                        ++GameManager.infectionCounterAlly;
                     }
 
                     OnAllyTurnStarted?.Invoke();
@@ -119,6 +122,12 @@ namespace NueGames.NueDeck.Scripts.Managers
                     
                     break;
                 case CombatStateType.EnemyTurn:
+
+                    if (GameManager.infectionCounterEnemy > 0 && GameManager.infectionCounterEnemy < 3)
+                    {
+                        infectionTargetEnemy.CharacterStats.Damage(infectPlayerValue);
+                        ++GameManager.infectionCounterEnemy;
+                    }
 
                     OnEnemyTurnStarted?.Invoke();
                     
