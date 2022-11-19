@@ -283,7 +283,7 @@ namespace NueGames.NueDeck.Scripts.Managers
                 UIManager.CombatCanvas.gameObject.SetActive(false);
                 UIManager.RewardCanvas.gameObject.SetActive(true);
                 UIManager.RewardCanvas.PrepareCanvas();
-                UIManager.RewardCanvas.BuildReward(RewardType.Gold);
+                //UIManager.RewardCanvas.BuildReward(RewardType.Gold);
                 UIManager.RewardCanvas.BuildReward(RewardType.Card);
             }
            
