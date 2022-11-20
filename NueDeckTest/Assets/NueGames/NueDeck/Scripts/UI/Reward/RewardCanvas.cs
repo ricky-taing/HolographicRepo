@@ -59,7 +59,7 @@ namespace NueGames.NueDeck.Scripts.UI.Reward
                     throw new ArgumentOutOfRangeException(nameof(rewardType), rewardType, null);
             }
         }
-        
+
         public override void ResetCanvas()
         {
             ResetRewards();
