@@ -46,6 +46,7 @@ namespace NueGames.NueDeck.Scripts.Managers
             {
                 Instance = this;
             }
+            Debug.Log(DrawPile);
         }
 
         #endregion
@@ -72,6 +73,9 @@ namespace NueGames.NueDeck.Scripts.Managers
                     break;
                 }
 
+                //Does this DrawPile grab duplicates?
+                //Where are the cards added to the DrawPile List?
+                Debug.Log(DrawPile);
                 var randomCard = DrawPile[Random.Range(0, DrawPile.Count)];
                 var clone = GameManager.BuildAndGetCard(randomCard, HandController.drawTransform);
                 HandController.AddCardToHand(clone);
