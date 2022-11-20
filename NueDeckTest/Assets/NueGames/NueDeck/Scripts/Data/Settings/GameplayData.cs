@@ -15,7 +15,7 @@ namespace NueGames.NueDeck.Scripts.Data.Settings
         [SerializeField] private List<AllyBase> initalAllyList;
         
         [Header("Decks")] 
-        [SerializeField] private DeckData initalDeck;
+        [SerializeField] public DeckData initalDeck;
         [SerializeField] private int maxCardOnHand;
         
         [Header("Card Settings")] 
