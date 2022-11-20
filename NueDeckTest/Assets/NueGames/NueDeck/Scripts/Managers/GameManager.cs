@@ -19,6 +19,8 @@ namespace NueGames.NueDeck.Scripts.Managers
         [SerializeField] private GameplayData gameplayData;
         [SerializeField] private EncounterData encounterData;
         [SerializeField] private SceneData sceneData;
+        public int infectionCounterAlly = 0;
+        public int infectionCounterEnemy = 0;
 
 
         #region Cache

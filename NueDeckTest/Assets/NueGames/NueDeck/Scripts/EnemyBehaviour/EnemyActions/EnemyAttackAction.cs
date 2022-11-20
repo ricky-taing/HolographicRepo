@@ -11,9 +11,10 @@ namespace NueGames.NueDeck.Scripts.EnemyBehaviour.EnemyActions
         public override void DoAction(EnemyActionParameters actionParameters)
         {
             if (!actionParameters.TargetCharacter) return;
-            var value = Mathf.RoundToInt(actionParameters.Value +
+            /*var value = Mathf.RoundToInt(actionParameters.Value +
                                          actionParameters.SelfCharacter.CharacterStats.StatusDict[StatusType.Strength]
-                                             .StatusValue);
+                                             .StatusValue);*/
+            var value = Mathf.RoundToInt(actionParameters.Value);
             actionParameters.TargetCharacter.CharacterStats.Damage(value);
             if (FxManager != null)
             {

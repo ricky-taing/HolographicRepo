@@ -20,9 +20,9 @@ MonoBehaviour:
   usableWithoutTarget: 0
   exhaustAfterPlay: 0
   cardActionDataList:
-  - cardActionType: 0
+  - cardActionType: 10
     actionTargetType: 0
-    actionValue: 3
+    actionValue: 2
     actionDelay: 0
   cardDescriptionDataList:
   - descriptionText: 'Deals '
@@ -43,7 +43,7 @@ MonoBehaviour:
     usePrefixOnModifiedValue: 1
     modifiedValuePrefix: '*'
     overrideColorOnValueScaled: 1
-  - descriptionText: ' damage'
+  - descriptionText: ' damage over 3 turns'
     enableOverrideColor: 0
     overrideColor: {r: 0, g: 0, b: 0, a: 1}
     useModifier: 0
