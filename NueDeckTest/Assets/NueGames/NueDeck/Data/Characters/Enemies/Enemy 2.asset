@@ -19,10 +19,10 @@ MonoBehaviour:
   enemyPrefab: {fileID: 243822687015991123, guid: 9fec376b8bc12e645a735f176747a31b, type: 3}
   followAbilityPattern: 0
   enemyAbilityList:
-  - name: Attack
+  - name: Infect
     intention: {fileID: 11400000, guid: 2af475f5121b73d4c99b67551230aa48, type: 2}
     hideActionValue: 0
     actionList:
-    - actionType: 2
-      minActionValue: 3
-      maxActionValue: 3
+    - actionType: 1
+      minActionValue: 2
+      maxActionValue: 2

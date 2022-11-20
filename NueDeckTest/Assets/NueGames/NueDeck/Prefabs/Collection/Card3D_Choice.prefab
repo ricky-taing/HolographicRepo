@@ -83,6 +83,46 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 403392181165248341, guid: a9728682a56595f4989b8f224d934689, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1596756128916493054, guid: a9728682a56595f4989b8f224d934689, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1791404967295555415, guid: a9728682a56595f4989b8f224d934689, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1791404967295555415, guid: a9728682a56595f4989b8f224d934689, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1791404967295555415, guid: a9728682a56595f4989b8f224d934689, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1791404967295555415, guid: a9728682a56595f4989b8f224d934689, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1791404967295555415, guid: a9728682a56595f4989b8f224d934689, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 1791404967295555415, guid: a9728682a56595f4989b8f224d934689, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 1791404967295555415, guid: a9728682a56595f4989b8f224d934689, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1791404967295555415, guid: a9728682a56595f4989b8f224d934689, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2689473134106589730, guid: a9728682a56595f4989b8f224d934689, type: 3}
       propertyPath: m_Name
       value: Card3D_Choice
@@ -131,17 +171,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3115556430404315278, guid: a9728682a56595f4989b8f224d934689, type: 3}
-      propertyPath: m_IsActive
-      value: 0
+    - target: {fileID: 3085244622617530667, guid: a9728682a56595f4989b8f224d934689, type: 3}
+      propertyPath: m_fontSize
+      value: 15
       objectReference: {fileID: 0}
-    - target: {fileID: 5861938069322738236, guid: a9728682a56595f4989b8f224d934689, type: 3}
-      propertyPath: m_IsActive
-      value: 1
+    - target: {fileID: 3085244622617530667, guid: a9728682a56595f4989b8f224d934689, type: 3}
+      propertyPath: m_fontSizeMax
+      value: 15
       objectReference: {fileID: 0}
-    - target: {fileID: 5942016735620747368, guid: a9728682a56595f4989b8f224d934689, type: 3}
-      propertyPath: m_IsActive
-      value: 0
+    - target: {fileID: 3660415334001918324, guid: a9728682a56595f4989b8f224d934689, type: 3}
+      propertyPath: m_fontSize
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a9728682a56595f4989b8f224d934689, type: 3}
