@@ -8,13 +8,29 @@ public class TestScript : MonoBehaviour
     [SerializeField] private DeckSelectionWindow myDeckSelectionWindow;
     [SerializeField] private Image myScreenBlocker;
 
+    [SerializeField] public GameplayData gameplayData;
+
     private string userDeckSelection;
+    private bool gameStart;
+    private int count = 1;
 
     // Start is called before the first frame update
     void Start()
     {
-        OpenDeckSelectionWindow("Please select a deck");
-        myScreenBlocker.enabled = true;
+        
+        if (count == 1) {
+            gameStart = true;
+            if (gameStart == true)
+                {
+                    OpenDeckSelectionWindow("Please select a deck");
+                    myScreenBlocker.enabled = true;
+                }
+            else
+                {
+                    myScreenBlocker.enabled = false;
+                }
+        }
+        
     }
 
     private void OpenDeckSelectionWindow(string message)
@@ -31,7 +47,10 @@ public class TestScript : MonoBehaviour
         myDeckSelectionWindow.gameObject.SetActive(false);
         myScreenBlocker.enabled = false;
         userDeckSelection = "whitehat";
+
         Debug.Log(userDeckSelection);
+        gameStart = false;
+        count -= 1;
     }
 
     private void greyhatClicked()
@@ -40,6 +59,8 @@ public class TestScript : MonoBehaviour
         myScreenBlocker.enabled = false;
         userDeckSelection = "greyhat";
         Debug.Log(userDeckSelection);
+        gameStart = false;
+        count -= 1;
     }
 
     private void blackhatClicked()
@@ -48,5 +69,7 @@ public class TestScript : MonoBehaviour
         myScreenBlocker.enabled = false;
         userDeckSelection = "blackhat";
         Debug.Log(userDeckSelection);
+        gameStart = false;
+        count -= 1;
     }
 }
