@@ -1,8 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using NueGames.NueDeck.Scripts.Card;
-using NueGames.NueDeck.Scripts.Characters;
 using NueGames.NueDeck.Scripts.Data.Collection;
+using NueGames.NueDeck.Scripts.Data.Containers;
+using NueGames.NueDeck.Scripts.Data.Settings;
+using NueGames.NueDeck.Scripts.EnemyBehaviour;
+using NueGames.NueDeck.Scripts.NueExtentions;
 using UnityEngine;
 using UnityEngine.UI;
 
