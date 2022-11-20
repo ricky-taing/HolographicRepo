@@ -37,13 +37,7 @@ namespace NueGames.NueDeck.Scripts.Data.Settings
         public int MaxMana => maxMana;
         public bool IsRandomHand => isRandomHand;
         public List<AllyBase> InitalAllyList => initalAllyList;
-        // public DeckData InitalDeck => initalDeck;
-        if (userDeckSelection == "whitehat")
-            public DeckData InitalDeck => whitehatDeck;
-        elif (userDeckSelection == "greyhat")
-            public DeckData InitalDeck => greyhatDeck;
-        elif (userDeckSelection == "blackhat")
-            public DeckData InitalDeck => blackhatDeck;
+        public DeckData InitalDeck => initalDeck;
         public int RandomCardCount => randomCardCount;
         public int MaxCardOnHand => maxCardOnHand;
         public List<CardData> AllCardsList => allCardsList;

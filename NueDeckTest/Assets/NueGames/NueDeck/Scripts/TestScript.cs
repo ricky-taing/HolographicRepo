@@ -1,8 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using NueGames.NueDeck.Scripts.Card;
-using NueGames.NueDeck.Scripts.Characters;
-using NueGames.NueDeck.Scripts.Data.Collection;
 using UnityEngine;
 using UnityEngine.UI;
 
