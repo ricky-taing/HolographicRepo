@@ -15,7 +15,7 @@ namespace NueGames.NueDeck.Scripts.Data.Settings
         [SerializeField] private List<AllyBase> initalAllyList;
         
         [Header("Decks")] 
-        [SerializeField] private DeckData initalDeck;
+        [SerializeField] public DeckData initalDeck;
         [SerializeField] private int maxCardOnHand;
         
         [Header("Card Settings")] 
@@ -29,6 +29,8 @@ namespace NueGames.NueDeck.Scripts.Data.Settings
         [Header("Modifiers")]
         [SerializeField] private bool isRandomHand = false;
         [SerializeField] private int randomCardCount;
+
+        [SerializeField] public TestScript script;
         
         #region Encapsulation
         public int DrawCount => drawCount;
@@ -43,5 +45,13 @@ namespace NueGames.NueDeck.Scripts.Data.Settings
         public string DefaultName => defaultName;
         public bool UseStageSystem => useStageSystem;
         #endregion
+
+        // if (userDeckSelection == "whitehat")
+        //     public DeckData InitalDeck => whitehatDeck;
+        // elif (userDeckSelection == "greyhat")
+        //     public DeckData InitalDeck => greyhatDeck;
+        // elif (userDeckSelection == "blackhat")
+        //     public DeckData InitalDeck => blackhatDeck;
+
     }
 }
