@@ -24,8 +24,8 @@ namespace NueGames.NueDeck.Scripts.Card.CardActions //NueGames.NueDeck.Scripts.U
             if (CombatManager != null)
             {
                 CombatManager.IncreaseBits(Mathf.RoundToInt(actionParameters.Value));
-                UIManager.InformationCanvas.SetGoldText(GameManager.PersistentGameplayData.CurrentGold);
-                //uiManager.InformationCanvas.SetGoldText(GameManager.PersistentGameplayData.CurrentGold);
+                UIManager.CombatCanvas.SetBitText(GameManager.PersistentGameplayData.CurrentGold);
+                //UIManager.InformationCanvas.SetGoldText(GameManager.PersistentGameplayData.CurrentGold);
             }
             else
                 Debug.LogError("There is no CombatManager");
