@@ -29,7 +29,7 @@ public class TestScript : MonoBehaviour
             gameStart = true;
             if (gameStart == true)
                 {
-                    OpenDeckSelectionWindow("Please select a deck");
+                    OpenDeckSelectionWindow("Choose Your Starter Deck");
                     myScreenBlocker.enabled = true;
                 }
             else
