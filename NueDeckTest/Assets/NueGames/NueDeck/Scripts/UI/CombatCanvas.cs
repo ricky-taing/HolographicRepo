@@ -13,6 +13,7 @@ namespace NueGames.NueDeck.Scripts.UI
         [SerializeField] private TextMeshProUGUI exhaustPileTextField;
         [SerializeField] private TextMeshProUGUI manaTextTextField;
         [SerializeField] private TextMeshProUGUI bitsTextTextField;
+        [SerializeField] private TextMeshProUGUI healthTextField;
 
         [Header("Panels")]
         [SerializeField] private GameObject combatWinPanel;
@@ -24,6 +25,7 @@ namespace NueGames.NueDeck.Scripts.UI
         public TextMeshProUGUI BitsTextTextField => bitsTextTextField;
         public GameObject CombatWinPanel => combatWinPanel;
         public GameObject CombatLosePanel => combatLosePanel;
+        public TextMeshProUGUI HealthTextField => healthTextField;
 
         public TextMeshProUGUI ExhaustPileTextField => exhaustPileTextField;
 
@@ -45,6 +47,8 @@ namespace NueGames.NueDeck.Scripts.UI
         }
 
         public void SetBitText(int value) => bitsTextTextField.text = $"{value}";
+
+        public void SetHealthText(int currentHealth, int maxHealth) => HealthTextField.text = $"{currentHealth}/{maxHealth}";
 
         public override void ResetCanvas()
         {
