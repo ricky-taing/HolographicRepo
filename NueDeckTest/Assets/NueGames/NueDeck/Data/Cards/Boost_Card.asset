@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: boost_card
   cardName: Boost
-  manaCost: 1
+  manaCost: 0
   cardSprite: {fileID: 0}
   rarity: 0
   usableWithoutTarget: 1

@@ -184,6 +184,14 @@ namespace NueGames.NueDeck.Scripts.Managers
             GameManager.PersistentGameplayData.CurrentMana += target;
             UIManager.CombatCanvas.SetPileTexts();
         }
+
+        //For Holographic, bits is same as gold essentially.
+        public void IncreaseBits(int target)
+        {
+            GameManager.PersistentGameplayData.CurrentGold += target;
+            UIManager.CombatCanvas.SetPileTexts();
+        }
+
         public void HighlightCardTarget(ActionTargetType targetTypeTargetType)
         {
             switch (targetTypeTargetType)
@@ -283,7 +291,7 @@ namespace NueGames.NueDeck.Scripts.Managers
                 UIManager.CombatCanvas.gameObject.SetActive(false);
                 UIManager.RewardCanvas.gameObject.SetActive(true);
                 UIManager.RewardCanvas.PrepareCanvas();
-                UIManager.RewardCanvas.BuildReward(RewardType.Gold);
+                //UIManager.RewardCanvas.BuildReward(RewardType.Gold);
                 UIManager.RewardCanvas.BuildReward(RewardType.Card);
             }
            
