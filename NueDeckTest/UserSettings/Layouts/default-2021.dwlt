@@ -343,13 +343,13 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/NueGames/NueDeck/Scenes
+    - Assets/NueGames/NueDeck/Scripts/UI
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/NueGames/NueDeck/Scenes
+  - Assets/NueGames/NueDeck/Scripts/UI
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\annaj\OneDrive\Documents\GitHub\HolographicRepo\NueDeckTest
   m_LockTracker:

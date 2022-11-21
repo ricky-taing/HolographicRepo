@@ -8,7 +8,8 @@ namespace NueGames.NueDeck.Scripts.Characters.Allies
         {
             base.BuildCharacter();
             if (UIManager != null)
-                CharacterStats.OnHealthChanged += UIManager.InformationCanvas.SetHealthText;
+                //CharacterStats.OnHealthChanged += UIManager.InformationCanvas.SetHealthText;
+                CharacterStats.OnHealthChanged += UIManager.CombatCanvas.SetHealthText;
             CharacterStats.SetCurrentHealth(CharacterStats.CurrentHealth);
         }
     }
