@@ -40,10 +40,11 @@ namespace NueGames.NueDeck.Scripts.UI.Reward
             
             switch (rewardType)
             {
+                //We don't want the player to earn gold after battle, only when using Extract card
                 case RewardType.Gold:
                     var rewardGold = rewardContainerData.GetRandomGoldReward(out var goldRewardData);
-                    rewardClone.BuildReward(goldRewardData.RewardSprite,goldRewardData.RewardDescription);
-                    rewardClone.RewardButton.onClick.AddListener(()=>GetGoldReward(rewardClone,rewardGold));
+                    rewardClone.BuildReward(goldRewardData.RewardSprite, goldRewardData.RewardDescription);
+                    rewardClone.RewardButton.onClick.AddListener(() => GetGoldReward(rewardClone, rewardGold));
                     break;
                 case RewardType.Card:
                     var rewardCardList = rewardContainerData.GetRandomCardRewardList(out var cardRewardData);
