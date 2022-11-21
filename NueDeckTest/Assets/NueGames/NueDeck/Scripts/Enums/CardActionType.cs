@@ -9,9 +9,11 @@
         IncreaseMaxHealth,
         Draw,
         EarnMana,
+        EarnBits,
         LifeSteal,
         Stun,
         Exhaust,
         Infect
+    
     }
 }
