@@ -27,5 +27,5 @@ MonoBehaviour:
   cardPrefab: {fileID: 2689473134106589740, guid: a9728682a56595f4989b8f224d934689, type: 3}
   defaultName: Holographic
   useStageSystem: 0
-  isRandomHand: 1
+  isRandomHand: 0
   randomCardCount: 10
