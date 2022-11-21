@@ -13,5 +13,6 @@
         Stun,
         Exhaust,
         Infect
+    
     }
 }
