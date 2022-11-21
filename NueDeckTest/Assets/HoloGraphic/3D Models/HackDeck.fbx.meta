@@ -3,12 +3,7 @@ guid: 31e8ce5aec2f6444d8d2db0b970c7f73
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: HackDeckMat
-    second: {fileID: 2100000, guid: b082f52cdedc9204e9e358c889643531, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
