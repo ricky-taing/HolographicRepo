@@ -13,16 +13,13 @@ public class TestScript : MonoBehaviour
     [SerializeField] private Image myScreenBlocker;
 
     [SerializeField] public GameplayData gameplayData;
-    [SerializeField] public DeckData whitehatData;
-    [SerializeField] public DeckData greyhatData;
-    [SerializeField] public DeckData blackhatData;
 
     private string userDeckSelection;
     private bool gameStart;
     private int count = 1;
 
     // Start is called before the first frame update
-    void Awake()
+    void Start()
     {
         
         if (count == 1) {
@@ -54,7 +51,7 @@ public class TestScript : MonoBehaviour
         myDeckSelectionWindow.gameObject.SetActive(false);
         myScreenBlocker.enabled = false;
         userDeckSelection = "whitehat";
-        gameplayData.initalDeck = whitehatData;
+
         Debug.Log(userDeckSelection);
         gameStart = false;
         count -= 1;
@@ -65,7 +62,6 @@ public class TestScript : MonoBehaviour
         myDeckSelectionWindow.gameObject.SetActive(false);
         myScreenBlocker.enabled = false;
         userDeckSelection = "greyhat";
-        gameplayData.initalDeck = greyhatData;
         Debug.Log(userDeckSelection);
         gameStart = false;
         count -= 1;
@@ -76,7 +72,6 @@ public class TestScript : MonoBehaviour
         myDeckSelectionWindow.gameObject.SetActive(false);
         myScreenBlocker.enabled = false;
         userDeckSelection = "blackhat";
-        gameplayData.initalDeck = blackhatData;
         Debug.Log(userDeckSelection);
         gameStart = false;
         count -= 1;
