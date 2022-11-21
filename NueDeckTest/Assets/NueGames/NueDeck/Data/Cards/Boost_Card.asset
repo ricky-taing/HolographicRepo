@@ -22,10 +22,10 @@ MonoBehaviour:
   cardActionDataList:
   - cardActionType: 6
     actionTargetType: 1
-    actionValue: 2
+    actionValue: 1
     actionDelay: 0
   cardDescriptionDataList:
-  - descriptionText: 'Gives '
+  - descriptionText: 'Gain '
     enableOverrideColor: 0
     overrideColor: {r: 0, g: 0, b: 0, a: 1}
     useModifier: 0
@@ -43,7 +43,7 @@ MonoBehaviour:
     usePrefixOnModifiedValue: 1
     modifiedValuePrefix: '*'
     overrideColorOnValueScaled: 1
-  - descriptionText: ' ram'
+  - descriptionText: ' RAM'
     enableOverrideColor: 0
     overrideColor: {r: 0, g: 0, b: 0, a: 1}
     useModifier: 0
