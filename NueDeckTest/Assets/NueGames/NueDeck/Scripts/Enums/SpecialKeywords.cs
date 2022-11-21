@@ -7,6 +7,8 @@
         Poison,
         Exhaust,
         Dexterity,
-        Stun
+        Stun,
+        Infect,
+        Extract
     }
 }

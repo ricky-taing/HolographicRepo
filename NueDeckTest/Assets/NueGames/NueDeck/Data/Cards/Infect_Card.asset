@@ -25,7 +25,7 @@ MonoBehaviour:
     actionValue: 2
     actionDelay: 0
   cardDescriptionDataList:
-  - descriptionText: 'Deals '
+  - descriptionText: 'Infect '
     enableOverrideColor: 0
     overrideColor: {r: 0, g: 0, b: 0, a: 1}
     useModifier: 0
@@ -39,11 +39,11 @@ MonoBehaviour:
     overrideColor: {r: 0.7686275, g: 0.14117648, b: 0.18823531, a: 1}
     useModifier: 1
     modifiedActionValueIndex: 0
-    modiferStats: 2
+    modiferStats: 6
     usePrefixOnModifiedValue: 1
     modifiedValuePrefix: '*'
     overrideColorOnValueScaled: 1
-  - descriptionText: ' damage over 3 turns'
+  - descriptionText: ' '
     enableOverrideColor: 0
     overrideColor: {r: 0, g: 0, b: 0, a: 1}
     useModifier: 0
@@ -52,5 +52,5 @@ MonoBehaviour:
     usePrefixOnModifiedValue: 0
     modifiedValuePrefix: '*'
     overrideColorOnValueScaled: 0
-  specialKeywordsList: 
+  specialKeywordsList: 06000000
   audioType: 0
