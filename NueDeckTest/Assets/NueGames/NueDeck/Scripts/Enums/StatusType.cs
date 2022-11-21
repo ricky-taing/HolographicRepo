@@ -7,6 +7,7 @@
         Poison,
         Strength,
         Dexterity,
-        Stun
+        Stun,
+        Infect
     }
 }
