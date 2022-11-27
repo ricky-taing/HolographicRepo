@@ -7,6 +7,8 @@ namespace NueGames.NueDeck.Scripts.UI
 {
     public class CombatCanvas : CanvasBase
     {
+        public static CombatCanvas Instance { get; private set; }
+
         [Header("Texts")]
         [SerializeField] private TextMeshProUGUI drawPileTextField;
         [SerializeField] private TextMeshProUGUI discardPileTextField;
@@ -18,6 +20,11 @@ namespace NueGames.NueDeck.Scripts.UI
         [Header("Panels")]
         [SerializeField] private GameObject combatWinPanel;
         [SerializeField] private GameObject combatLosePanel;
+
+        [Header("Player UI")]
+        [SerializeField] public GameObject hpUI;
+        [SerializeField] public GameObject ramUI;
+        [SerializeField] public GameObject bitsUI;
 
         public TextMeshProUGUI DrawPileTextField => drawPileTextField;
         public TextMeshProUGUI DiscardPileTextField => discardPileTextField;

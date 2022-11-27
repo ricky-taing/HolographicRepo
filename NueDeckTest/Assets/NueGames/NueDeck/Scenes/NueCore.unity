@@ -546,6 +546,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7587195817701233737, guid: e75f7099a69ce3b469d565d045c707d2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7655548429004154197, guid: e75f7099a69ce3b469d565d045c707d2, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -558,6 +562,18 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 64672e37660806e44a7441356167004e, type: 3}
+    - target: {fileID: 8225928748238834599, guid: e75f7099a69ce3b469d565d045c707d2, type: 3}
+      propertyPath: hpUI
+      value: 
+      objectReference: {fileID: 104441339}
+    - target: {fileID: 8225928748238834599, guid: e75f7099a69ce3b469d565d045c707d2, type: 3}
+      propertyPath: ramUI
+      value: 
+      objectReference: {fileID: 104441338}
+    - target: {fileID: 8225928748238834599, guid: e75f7099a69ce3b469d565d045c707d2, type: 3}
+      propertyPath: bitsUI
+      value: 
+      objectReference: {fileID: 104441337}
     - target: {fileID: 8225928748238834599, guid: e75f7099a69ce3b469d565d045c707d2, type: 3}
       propertyPath: healthTextField
       value: 
@@ -607,6 +623,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &104441337 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8569493367382041406, guid: e75f7099a69ce3b469d565d045c707d2, type: 3}
+  m_PrefabInstance: {fileID: 104441335}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &104441338 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3386039728644953544, guid: e75f7099a69ce3b469d565d045c707d2, type: 3}
+  m_PrefabInstance: {fileID: 104441335}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &104441339 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3537190555825263213, guid: e75f7099a69ce3b469d565d045c707d2, type: 3}
+  m_PrefabInstance: {fileID: 104441335}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &185822258
 PrefabInstance:
   m_ObjectHideFlags: 0

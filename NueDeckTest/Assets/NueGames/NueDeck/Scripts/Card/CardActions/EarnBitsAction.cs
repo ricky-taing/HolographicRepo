@@ -17,6 +17,7 @@ namespace NueGames.NueDeck.Scripts.Card.CardActions //NueGames.NueDeck.Scripts.U
     public class EarnBitsAction : CardActionBase
     {
         public UIManager UIManager => UIManager.Instance;
+        public CombatCanvas CombatCanvas => CombatCanvas.Instance;
 
         public override CardActionType ActionType => CardActionType.EarnBits;
         public override void DoAction(CardActionParameters actionParameters)
@@ -30,8 +31,14 @@ namespace NueGames.NueDeck.Scripts.Card.CardActions //NueGames.NueDeck.Scripts.U
             else
                 Debug.LogError("There is no CombatManager");
 
+            //The fx is applied to SelfCharacter, but we made the character invisible for a first-person experience.
+            //Instead replace with fx to the BIT counter. Need a reference to the UI
             if (FxManager != null)
-                FxManager.PlayFx(actionParameters.SelfCharacter.transform, FxType.Buff);
+                /*FxManager.PlayFx(actionParameters.SelfCharacter.transform, FxType.Buff);*/
+                Debug.Log(CombatCanvas.bitsUI); 
+                Debug.Log(CombatCanvas.bitsUI.transform.GetType());
+                //FxManager.PlayFx(CombatCanvas.bitsUI.transform, FxType.Buff);
+                FxManager.PlayFx(actionParameters.BitsUI.transform, FxType.Buff);
 
             if (AudioManager != null)
                 AudioManager.PlayOneShot(actionParameters.CardData.AudioType);

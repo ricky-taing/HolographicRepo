@@ -2,6 +2,7 @@
 using NueGames.NueDeck.Scripts.Data.Collection;
 using NueGames.NueDeck.Scripts.Enums;
 using NueGames.NueDeck.Scripts.Managers;
+using UnityEngine;
 
 namespace NueGames.NueDeck.Scripts.Card
 {
@@ -12,13 +13,16 @@ namespace NueGames.NueDeck.Scripts.Card
         public readonly CharacterBase SelfCharacter;
         public readonly CardData CardData;
         public readonly CardBase CardBase;
-        public CardActionParameters(float value,CharacterBase target, CharacterBase self,CardData cardData, CardBase cardBase)
+
+        public readonly GameObject BitsUI;
+        public CardActionParameters(float value,CharacterBase target, CharacterBase self,CardData cardData, CardBase cardBase, GameObject bitsUI)
         {
             Value = value;
             TargetCharacter = target;
             SelfCharacter = self;
             CardData = cardData;
             CardBase = cardBase;
+            BitsUI = bitsUI;
         }
     }
     public abstract class CardActionBase

@@ -7,6 +7,7 @@ using NueGames.NueDeck.Scripts.Enums;
 using NueGames.NueDeck.Scripts.Managers;
 using NueGames.NueDeck.Scripts.NueExtentions;
 using NueGames.NueDeck.Scripts.Utils;
+using NueGames.NueDeck.Scripts.UI;
 using NueGames.NueDeck.ThirdParty.NueTooltip.Core;
 using NueGames.NueDeck.ThirdParty.NueTooltip.CursorSystem;
 using NueGames.NueDeck.ThirdParty.NueTooltip.Interfaces;
@@ -20,6 +21,8 @@ namespace NueGames.NueDeck.Scripts.Card
 {
     public class CardBase : MonoBehaviour,I2DTooltipTarget, IPointerDownHandler, IPointerUpHandler
     {
+        public CombatCanvas CombatCanvas => CombatCanvas.Instance;
+
         [Header("Base References")]
         [SerializeField] protected Transform descriptionRoot;
         [SerializeField] protected Image cardImage;
@@ -28,7 +31,9 @@ namespace NueGames.NueDeck.Scripts.Card
         [SerializeField] protected TextMeshProUGUI descTextField;
         [SerializeField] protected TextMeshProUGUI manaTextField;
         [SerializeField] protected List<RarityRoot> rarityRootList;
-        
+
+        //[SerializeField] private GameObject CombatCanvas.bitsUI;
+
 
         #region Cache
         public CardData CardData { get; private set; }
@@ -89,7 +94,7 @@ namespace NueGames.NueDeck.Scripts.Card
                 foreach (var target in targetList)
                     CardActionProcessor.GetAction(playerAction.CardActionType)
                         .DoAction(new CardActionParameters(playerAction.ActionValue,
-                            target,self,CardData,this));
+                            target,self,CardData,this,CombatCanvas.bitsUI));
             }
             CollectionManager.OnCardPlayed(this);
         }
