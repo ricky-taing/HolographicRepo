@@ -296,6 +296,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4563793373553800792, guid: 36c7284207bc0f143bdc3f1933146cf5, type: 3}
+      propertyPath: backgroundType
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4975396874289159475, guid: 36c7284207bc0f143bdc3f1933146cf5, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.8
@@ -318,6 +322,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4975396874289159475, guid: 36c7284207bc0f143bdc3f1933146cf5, type: 3}
       propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5531663734602138261, guid: 36c7284207bc0f143bdc3f1933146cf5, type: 3}
+      propertyPath: allyPosList.Array.size
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7499582454155753044, guid: 36c7284207bc0f143bdc3f1933146cf5, type: 3}

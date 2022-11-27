@@ -20,7 +20,7 @@ MonoBehaviour:
   followAbilityPattern: 1
   enemyAbilityList:
   - name: Direct
-    intention: {fileID: 0}
+    intention: {fileID: 11400000, guid: 2af475f5121b73d4c99b67551230aa48, type: 2}
     hideActionValue: 0
     actionList:
     - actionType: 0
