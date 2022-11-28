@@ -21,7 +21,7 @@ namespace NueGames.NueDeck.Scripts.Card
 {
     public class CardBase : MonoBehaviour,I2DTooltipTarget, IPointerDownHandler, IPointerUpHandler
     {
-        public CombatCanvas CombatCanvas => CombatCanvas.Instance;
+        public UIManager UIManager => UIManager.Instance;
 
         [Header("Base References")]
         [SerializeField] protected Transform descriptionRoot;
@@ -94,7 +94,7 @@ namespace NueGames.NueDeck.Scripts.Card
                 foreach (var target in targetList)
                     CardActionProcessor.GetAction(playerAction.CardActionType)
                         .DoAction(new CardActionParameters(playerAction.ActionValue,
-                            target,self,CardData,this,CombatCanvas.bitsUI));
+                            target,self,CardData,this, UIManager.CombatCanvas.BitsUI));
             }
             CollectionManager.OnCardPlayed(this);
         }

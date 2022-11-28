@@ -22,9 +22,9 @@ namespace NueGames.NueDeck.Scripts.UI
         [SerializeField] private GameObject combatLosePanel;
 
         [Header("Player UI")]
-        [SerializeField] public GameObject hpUI;
-        [SerializeField] public GameObject ramUI;
-        [SerializeField] public GameObject bitsUI;
+        [SerializeField] private GameObject hpUI;
+        [SerializeField] private GameObject ramUI;
+        [SerializeField] private GameObject bitsUI;
 
         public TextMeshProUGUI DrawPileTextField => drawPileTextField;
         public TextMeshProUGUI DiscardPileTextField => discardPileTextField;
@@ -33,8 +33,9 @@ namespace NueGames.NueDeck.Scripts.UI
         public GameObject CombatWinPanel => combatWinPanel;
         public GameObject CombatLosePanel => combatLosePanel;
         public TextMeshProUGUI HealthTextField => healthTextField;
-
         public TextMeshProUGUI ExhaustPileTextField => exhaustPileTextField;
+
+        public GameObject BitsUI => bitsUI;
 
         #region Setup
         private void Awake()
