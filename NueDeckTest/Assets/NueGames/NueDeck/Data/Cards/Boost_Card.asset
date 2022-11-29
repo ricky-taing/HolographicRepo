@@ -22,7 +22,7 @@ MonoBehaviour:
   cardActionDataList:
   - cardActionType: 6
     actionTargetType: 1
-    actionValue: 2
+    actionValue: 1
     actionDelay: 0
   cardDescriptionDataList:
   - descriptionText: 'Gives '

@@ -43,7 +43,7 @@ namespace NueGames.NueDeck.Scripts.UI
             DrawPileTextField.text = $"{CollectionManager.DrawPile.Count.ToString()}";
             DiscardPileTextField.text = $"{CollectionManager.DiscardPile.Count.ToString()}";
             ExhaustPileTextField.text =  $"{CollectionManager.ExhaustPile.Count.ToString()}";
-            ManaTextTextField.text = $"{GameManager.PersistentGameplayData.CurrentMana.ToString()}/{GameManager.PersistentGameplayData.MaxMana}";
+            ManaTextTextField.text = $"{GameManager.PersistentGameplayData.CurrentMana.ToString()}";
         }
 
         public void SetBitText(int value) => bitsTextTextField.text = $"{value}";
