@@ -2988,6 +2988,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 4079471534556425938, guid: 0f20f68f48abf2844b9f1fb520647c03, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenDeckSelectionScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 4079471534556425938, guid: 0f20f68f48abf2844b9f1fb520647c03, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: NueGames.NueDeck.Scripts.Utils.SceneChanger, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 4079471534556425939, guid: 0f20f68f48abf2844b9f1fb520647c03, type: 3}
       propertyPath: m_Sprite
       value: 

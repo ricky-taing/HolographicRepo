@@ -15,6 +15,7 @@ namespace NueGames.NueDeck.Scripts.Utils
         private enum SceneType
         {
             MainMenu,
+            DeckSelection,
             Map,
             Combat
         }
@@ -38,6 +39,14 @@ namespace NueGames.NueDeck.Scripts.Utils
                     GameManager.InitGameplayData();
                     GameManager.SetInitalHand();
                     break;
+
+                case SceneType.DeckSelection:
+                    UIManager.ChangeScene(GameManager.SceneData.deckSelectionSceneIndex);
+                    UIManager.SetCanvas(UIManager.CombatCanvas,false,true);
+                    UIManager.SetCanvas(UIManager.InformationCanvas,true,false);
+                    UIManager.SetCanvas(UIManager.RewardCanvas,false,true);
+                   
+                    break;
                 case SceneType.Map:
                     UIManager.ChangeScene(GameManager.SceneData.mapSceneIndex);
                     UIManager.SetCanvas(UIManager.CombatCanvas,false,true);
@@ -56,6 +65,10 @@ namespace NueGames.NueDeck.Scripts.Utils
                     throw new ArgumentOutOfRangeException(nameof(type), type, null);
             }
         }
+        public void OpenDeckSelectionScene()
+        {
+            StartCoroutine(DelaySceneChange(SceneType.DeckSelection));
+        }
         public void OpenMapScene()
         {
             StartCoroutine(DelaySceneChange(SceneType.Map));
@@ -69,6 +82,8 @@ namespace NueGames.NueDeck.Scripts.Utils
 
             if (sceneId == GameManager.SceneData.mainMenuSceneIndex)
                 OpenMainMenuScene();
+            else if (sceneId == GameManager.SceneData.deckSelectionSceneIndex)
+                OpenDeckSelectionScene();
             else if (sceneId == GameManager.SceneData.mapSceneIndex)
                 OpenMapScene();
             else if (sceneId == GameManager.SceneData.combatSceneIndex)

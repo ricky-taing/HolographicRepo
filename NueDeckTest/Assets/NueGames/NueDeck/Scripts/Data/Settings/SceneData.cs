@@ -8,5 +8,6 @@ namespace NueGames.NueDeck.Scripts.Data.Settings
         public int mainMenuSceneIndex = 0;
         public int mapSceneIndex = 1;
         public int combatSceneIndex = 2;
+        public int deckSelectionSceneIndex = 3;
     }
 }

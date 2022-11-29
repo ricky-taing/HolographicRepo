@@ -18,15 +18,17 @@ public class TestScript : MonoBehaviour
     [SerializeField] public DeckData blackhatData;
 
     private string userDeckSelection;
-    private bool gameStart;
+    private bool gameStart = true;
     private int count = 1;
+
+    
 
     // Start is called before the first frame update
     void Start()
     {
         
         if (count == 1) {
-            gameStart = true;
+            
             if (gameStart == true)
                 {
                     OpenDeckSelectionWindow("Choose Your Starter Deck");
@@ -51,8 +53,9 @@ public class TestScript : MonoBehaviour
 
     private void whitehatClicked()
     {
-        myDeckSelectionWindow.gameObject.SetActive(false);
-        myScreenBlocker.enabled = false;
+        gameStart = false;
+        // myDeckSelectionWindow.gameObject.SetActive(false);
+        // myScreenBlocker.enabled = false;
         userDeckSelection = "whitehat";
         gameplayData.initalDeck = whitehatData;
         Debug.Log(userDeckSelection);
@@ -62,8 +65,9 @@ public class TestScript : MonoBehaviour
 
     private void greyhatClicked()
     {
-        myDeckSelectionWindow.gameObject.SetActive(false);
-        myScreenBlocker.enabled = false;
+        gameStart = false;
+        // myDeckSelectionWindow.gameObject.SetActive(false);
+        // myScreenBlocker.enabled = false;
         userDeckSelection = "greyhat";
         gameplayData.initalDeck = greyhatData;
         Debug.Log(userDeckSelection);
@@ -73,8 +77,9 @@ public class TestScript : MonoBehaviour
 
     private void blackhatClicked()
     {
-        myDeckSelectionWindow.gameObject.SetActive(false);
-        myScreenBlocker.enabled = false;
+        gameStart = false;
+        // myDeckSelectionWindow.gameObject.SetActive(false);
+        // myScreenBlocker.enabled = false;
         userDeckSelection = "blackhat";
         gameplayData.initalDeck = blackhatData;
         Debug.Log(userDeckSelection);
