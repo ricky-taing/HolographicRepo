@@ -2,6 +2,7 @@ using NueGames.NueDeck.Scripts.Card;
 using NueGames.NueDeck.Scripts.Data.Collection;
 using NueGames.NueDeck.Scripts.Data.Containers;
 using NueGames.NueDeck.Scripts.Data.Settings;
+using NueGames.NueDeck.Scripts.Managers;
 using NueGames.NueDeck.Scripts.EnemyBehaviour;
 using NueGames.NueDeck.Scripts.NueExtentions;
 using UnityEngine;
@@ -9,6 +10,7 @@ using UnityEngine.UI;
 
 public class TestScript : MonoBehaviour
 {
+
     [SerializeField] private DeckSelectionWindow myDeckSelectionWindow;
     [SerializeField] private Image myScreenBlocker;
 
@@ -17,6 +19,8 @@ public class TestScript : MonoBehaviour
     [SerializeField] public DeckData greyhatData;
     [SerializeField] public DeckData blackhatData;
 
+    protected GameManager GameManager => GameManager.Instance;
+
     private string userDeckSelection;
     private bool gameStart;
     private int count = 1;
@@ -24,20 +28,24 @@ public class TestScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
-        if (count == 1) {
+
+        if (GameManager.deckSelectorCount==1)
+        {
             gameStart = true;
             if (gameStart == true)
-                {
-                    OpenDeckSelectionWindow("Choose Your Starter Deck");
-                    myScreenBlocker.enabled = true;
-                }
-            else
+            {
+                OpenDeckSelectionWindow("Choose Your Starter Deck");
+                myScreenBlocker.enabled = true;
+            }
+            /*else
                 {
                     myScreenBlocker.enabled = false;
-                }
+                }*/
         }
-        
+        else
+        {
+            myScreenBlocker.enabled = false;
+        }
     }
 
     private void OpenDeckSelectionWindow(string message)
@@ -58,6 +66,8 @@ public class TestScript : MonoBehaviour
         Debug.Log(userDeckSelection);
         gameStart = false;
         count -= 1;
+        GameManager.deckSelectorCount = -1;
+        GameManager.SetInitalHand();
     }
 
     private void greyhatClicked()
@@ -69,6 +79,8 @@ public class TestScript : MonoBehaviour
         Debug.Log(userDeckSelection);
         gameStart = false;
         count -= 1;
+        GameManager.deckSelectorCount = -1;
+        GameManager.SetInitalHand();
     }
 
     private void blackhatClicked()
@@ -80,5 +92,7 @@ public class TestScript : MonoBehaviour
         Debug.Log(userDeckSelection);
         gameStart = false;
         count -= 1;
+        GameManager.deckSelectorCount = -1;
+        GameManager.SetInitalHand();
     }
 }
