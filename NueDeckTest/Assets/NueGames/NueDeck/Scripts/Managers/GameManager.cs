@@ -5,6 +5,9 @@ using NueGames.NueDeck.Scripts.Data.Settings;
 using NueGames.NueDeck.Scripts.EnemyBehaviour;
 using NueGames.NueDeck.Scripts.NueExtentions;
 using UnityEngine;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 using Random = UnityEngine.Random;
 
 namespace NueGames.NueDeck.Scripts.Managers
@@ -26,6 +29,8 @@ namespace NueGames.NueDeck.Scripts.Managers
 
         #region Cache
         public SceneData SceneData => sceneData;
+
+        
         public EncounterData EncounterData => encounterData;
         public GameplayData GameplayData => gameplayData;
         public PersistentGameplayData PersistentGameplayData { get; private set; }
@@ -81,6 +86,7 @@ namespace NueGames.NueDeck.Scripts.Managers
         }
         public void NextEncounter()
         {
+
             PersistentGameplayData.CurrentEncounterId++;
             if (PersistentGameplayData.CurrentEncounterId>=EncounterData.EnemyEncounterList[PersistentGameplayData.CurrentStageId].EnemyEncounterList.Count)
             {

@@ -719,6 +719,18 @@ PrefabInstance:
       propertyPath: encounterData
       value: 
       objectReference: {fileID: 11400000, guid: f5edb2636b054b64db6c198fa4ec640f, type: 2}
+    - target: {fileID: 3747954644409722070, guid: fe4c5d93acf671e48b2593ed75c25a5f, type: 3}
+      propertyPath: floor.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3747954644409722070, guid: fe4c5d93acf671e48b2593ed75c25a5f, type: 3}
+      propertyPath: floor.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: f5edb2636b054b64db6c198fa4ec640f, type: 2}
+    - target: {fileID: 3747954644409722070, guid: fe4c5d93acf671e48b2593ed75c25a5f, type: 3}
+      propertyPath: floor.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: f5edb2636b054b64db6c198fa4ec640f, type: 2}
     - target: {fileID: 3747954644409722071, guid: fe4c5d93acf671e48b2593ed75c25a5f, type: 3}
       propertyPath: m_Name
       value: GameManager

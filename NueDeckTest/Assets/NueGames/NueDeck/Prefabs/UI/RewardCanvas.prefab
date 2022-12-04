@@ -125,7 +125,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 4432030442554485558}
         m_TargetAssemblyTypeName: NueGames.NueDeck.Scripts.Utils.SceneChanger, Assembly-CSharp
-        m_MethodName: OpenMapScene
+        m_MethodName: OpenCombatScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

@@ -267,10 +267,13 @@ namespace NueGames.NueDeck.Scripts.Managers
         }
         private void WinCombat()
         {
-            if (CurrentCombatStateType == CombatStateType.EndCombat) return;
+            if (CurrentCombatStateType == CombatStateType.EndCombat) GameManager.NextEncounter();
           
             CurrentCombatStateType = CombatStateType.EndCombat;
-           
+
+            if (GameManager.EncounterData.EnemyEncounterList.Count < GameManager.PersistentGameplayData.CurrentEncounterId)
+                GameManager.PersistentGameplayData.IsFinalEncounter = true;
+
             foreach (var allyBase in CurrentAlliesList)
             {
                 GameManager.PersistentGameplayData.SetAllyHealthData(allyBase.AllyCharacterData.CharacterID,
