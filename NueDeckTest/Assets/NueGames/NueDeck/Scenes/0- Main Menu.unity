@@ -1450,6 +1450,10 @@ PrefabInstance:
       propertyPath: InitialModule.startLifetime.scalar
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7248562899374635705, guid: 06f68746be60e8f44b7069c967d1c51a, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 53cb9d54ea99476418fe6b1b9c317a45, type: 2}
     - target: {fileID: 7320316099852620445, guid: 06f68746be60e8f44b7069c967d1c51a, type: 3}
       propertyPath: m_RootOrder
       value: 6
