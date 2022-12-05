@@ -31,7 +31,7 @@ namespace NueGames.NueDeck.Scripts.Card.CardActions //NueGames.NueDeck.Scripts.U
                 Debug.LogError("There is no CombatManager");
 
             if (FxManager != null)
-                FxManager.PlayFx(actionParameters.SelfCharacter.transform, FxType.Buff);
+                FxManager.PlayFx(actionParameters.SelfCharacter.transform, FxType.Stun);
 
             if (AudioManager != null)
                 AudioManager.PlayOneShot(actionParameters.CardData.AudioType);
