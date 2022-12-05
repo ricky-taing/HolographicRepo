@@ -25,7 +25,7 @@ MonoBehaviour:
     actionValue: 1
     actionDelay: 0
   cardDescriptionDataList:
-  - descriptionText: 'Gives '
+  - descriptionText: 'Gain '
     enableOverrideColor: 0
     overrideColor: {r: 0, g: 0, b: 0, a: 1}
     useModifier: 0

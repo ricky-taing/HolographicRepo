@@ -1,7 +1,9 @@
 using System;
 using System.Collections;
 using NueGames.NueDeck.Scripts.Managers;
+using NueGames.NueDeck.Scripts.Enums;
 using NueGames.NueDeck.ThirdParty.NueTooltip.Core;
+using NueGames.NueDeck.Scripts.Data.Containers;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -11,7 +13,8 @@ namespace NueGames.NueDeck.Scripts.Utils
     {
         private GameManager GameManager => GameManager.Instance;
         private UIManager UIManager => UIManager.Instance;
-        
+
+
         private enum SceneType
         {
             MainMenu,
@@ -20,6 +23,7 @@ namespace NueGames.NueDeck.Scripts.Utils
         }
         public void OpenMainMenuScene()
         {
+
             StartCoroutine(DelaySceneChange(SceneType.MainMenu));
         }
         private IEnumerator DelaySceneChange(SceneType type)
@@ -34,7 +38,8 @@ namespace NueGames.NueDeck.Scripts.Utils
                     UIManager.SetCanvas(UIManager.CombatCanvas,false,true);
                     UIManager.SetCanvas(UIManager.InformationCanvas,false,true);
                     UIManager.SetCanvas(UIManager.RewardCanvas,false,true);
-                   
+
+                    
                     GameManager.InitGameplayData();
                     GameManager.SetInitalHand();
                     break;

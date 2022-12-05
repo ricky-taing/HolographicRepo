@@ -52,5 +52,5 @@ MonoBehaviour:
     usePrefixOnModifiedValue: 0
     modifiedValuePrefix: '*'
     overrideColorOnValueScaled: 0
-  specialKeywordsList: 
-  audioType: 0
+  specialKeywordsList: 06000000
+  audioType: 8
