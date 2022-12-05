@@ -27,6 +27,6 @@ MonoBehaviour:
   - specialKeyword: 5
     contentText: Can not use any action
   - specialKeyword: 6
-    contentText: Deals X damage for 3 turns.
+    contentText: Deals 2 damage for 3 turns.
   - specialKeyword: 7
-    contentText: Extract X bits. Increases based on the number of encounters completed.
+    contentText: Extract Bits. Increases based on the number of checkpoints completed.
