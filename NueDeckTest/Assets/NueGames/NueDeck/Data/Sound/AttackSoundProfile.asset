@@ -13,4 +13,7 @@ MonoBehaviour:
   m_Name: AttackSoundProfile
   m_EditorClassIdentifier: 
   audioType: 0
-  randomClipList: []
+  randomClipList:
+  - {fileID: 8300000, guid: 41b63c4395c9f8f42b1db35675a77a46, type: 3}
+  - {fileID: 8300000, guid: ff8528832ab53dd43b32af840ec67ff3, type: 3}
+  - {fileID: 8300000, guid: 87e31a677ca948441a4edf4ae23ea2b9, type: 3}

@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: DrinkSoundProfile
   m_EditorClassIdentifier: 
   audioType: 5
-  randomClipList: []
+  randomClipList:
+  - {fileID: 8300000, guid: 24d8629455386e94f829f6119afbc9a3, type: 3}

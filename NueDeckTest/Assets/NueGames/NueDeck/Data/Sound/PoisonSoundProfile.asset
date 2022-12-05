@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: PoisonSoundProfile
   m_EditorClassIdentifier: 
   audioType: 8
-  randomClipList: []
+  randomClipList:
+  - {fileID: 8300000, guid: 0c7f3d68592ceca41ad33336f942537d, type: 3}

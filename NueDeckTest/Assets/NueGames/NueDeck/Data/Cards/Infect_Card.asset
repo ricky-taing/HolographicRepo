@@ -53,4 +53,4 @@ MonoBehaviour:
     modifiedValuePrefix: '*'
     overrideColorOnValueScaled: 0
   specialKeywordsList: 06000000
-  audioType: 0
+  audioType: 5

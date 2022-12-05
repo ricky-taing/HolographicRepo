@@ -18,6 +18,9 @@ namespace NueGames.NueDeck.Scripts.Card.CardActions
             if (++GameManager.infectionCounterEnemy == maxInfectTurns) { GameManager.infectionCounterEnemy = 0; }
             var value = Mathf.RoundToInt(actionParameters.Value); //+ selfCharacter.CharacterStats.StatusDict[StatusType.Strength].StatusValue;
 
+            if (AudioManager != null) 
+                AudioManager.PlayOneShot(actionParameters.CardData.AudioType);
+
             targetCharacter.CharacterStats.Damage(Mathf.RoundToInt(value));
             CombatManager.infectionTargetEnemy = targetCharacter;
             CombatManager.infectPlayerValue = value;
