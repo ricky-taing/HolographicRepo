@@ -26,20 +26,23 @@ namespace NueGames.NueDeck.Scripts.Card
 
         private void OnChoice()
         {
-            if (GameManager != null)
+            if (GameManager.PersistentGameplayData.CurrentGold >= 10)
             {
-                if (GameManager.PersistentGameplayData.CurrentGold >= 10)
+                if (GameManager != null)
                 {
-                    GameManager.PersistentGameplayData.CurrentCardsList.Add(_cardBase.CardData);
-                    GameManager.PersistentGameplayData.CurrentGold -= 10;
-                    Debug.Log(GameManager.PersistentGameplayData.CurrentGold);
-                    UIManager.CombatCanvas.SetBitText(GameManager.PersistentGameplayData.CurrentGold);
+                    if (GameManager.PersistentGameplayData.CurrentGold >= 10)
+                    {
+                        GameManager.PersistentGameplayData.CurrentCardsList.Add(_cardBase.CardData);
+                        GameManager.PersistentGameplayData.CurrentGold -= 10;
+                        Debug.Log(GameManager.PersistentGameplayData.CurrentGold);
+                        UIManager.CombatCanvas.SetBitText(GameManager.PersistentGameplayData.CurrentGold);
+                    }
                 }
-            }
 
-            if (UIManager != null)
-                UIManager.RewardCanvas.ChoicePanel.DisablePanel();
-            OnCardChose?.Invoke();
+                if (UIManager != null)
+                    UIManager.RewardCanvas.ChoicePanel.DisablePanel();
+                OnCardChose?.Invoke();
+            }
         }
 
 
