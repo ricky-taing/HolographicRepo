@@ -21,6 +21,7 @@ namespace NueGames.NueDeck.Scripts.Managers
         [SerializeField] private SceneData sceneData;
         public int infectionCounterAlly = 0;
         public int infectionCounterEnemy = 0;
+        public int deckSelectorCount = 1;
 
 
         #region Cache

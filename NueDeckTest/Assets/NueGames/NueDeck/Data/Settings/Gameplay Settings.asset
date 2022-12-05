@@ -29,3 +29,4 @@ MonoBehaviour:
   useStageSystem: 0
   isRandomHand: 0
   randomCardCount: 10
+  script: {fileID: 0}

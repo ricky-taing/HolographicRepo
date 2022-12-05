@@ -51,7 +51,7 @@ namespace NueGames.NueDeck.Scripts.Characters
         private void ShowNextAbility()
         {
             NextAbility = EnemyCharacterData.GetAbility(_usedAbilityCount);
-            EnemyCanvas.IntentImage.sprite = NextAbility.Intention.IntentionSprite;
+            //EnemyCanvas.IntentImage.sprite = NextAbility.Intention.IntentionSprite;
             
             if (NextAbility.HideActionValue)
             {

@@ -3,7 +3,17 @@ guid: dafd799debec84c498842617546bef1f
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: EnemyMat
+    second: {fileID: 2100000, guid: f49aeb3c2da7c594790176b81394d4be, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: aiStandardSurface2
+    second: {fileID: 2100000, guid: f49aeb3c2da7c594790176b81394d4be, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

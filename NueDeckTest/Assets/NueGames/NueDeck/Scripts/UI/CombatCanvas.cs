@@ -12,7 +12,9 @@ namespace NueGames.NueDeck.Scripts.UI
         [SerializeField] private TextMeshProUGUI discardPileTextField;
         [SerializeField] private TextMeshProUGUI exhaustPileTextField;
         [SerializeField] private TextMeshProUGUI manaTextTextField;
-        
+        [SerializeField] private TextMeshProUGUI bitsTextTextField;
+        [SerializeField] private TextMeshProUGUI healthTextField;
+
         [Header("Panels")]
         [SerializeField] private GameObject combatWinPanel;
         [SerializeField] private GameObject combatLosePanel;
@@ -20,8 +22,10 @@ namespace NueGames.NueDeck.Scripts.UI
         public TextMeshProUGUI DrawPileTextField => drawPileTextField;
         public TextMeshProUGUI DiscardPileTextField => discardPileTextField;
         public TextMeshProUGUI ManaTextTextField => manaTextTextField;
+        public TextMeshProUGUI BitsTextTextField => bitsTextTextField;
         public GameObject CombatWinPanel => combatWinPanel;
         public GameObject CombatLosePanel => combatLosePanel;
+        public TextMeshProUGUI HealthTextField => healthTextField;
 
         public TextMeshProUGUI ExhaustPileTextField => exhaustPileTextField;
 
@@ -39,8 +43,12 @@ namespace NueGames.NueDeck.Scripts.UI
             DrawPileTextField.text = $"{CollectionManager.DrawPile.Count.ToString()}";
             DiscardPileTextField.text = $"{CollectionManager.DiscardPile.Count.ToString()}";
             ExhaustPileTextField.text =  $"{CollectionManager.ExhaustPile.Count.ToString()}";
-            ManaTextTextField.text = $"{GameManager.PersistentGameplayData.CurrentMana.ToString()}/{GameManager.PersistentGameplayData.MaxMana}";
+            ManaTextTextField.text = $"{GameManager.PersistentGameplayData.CurrentMana.ToString()}";
         }
+
+        public void SetBitText(int value) => bitsTextTextField.text = $"{value}";
+
+        public void SetHealthText(int currentHealth, int maxHealth) => HealthTextField.text = $"{currentHealth}/{maxHealth}";
 
         public override void ResetCanvas()
         {

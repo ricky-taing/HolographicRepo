@@ -3,7 +3,12 @@ guid: a74b308f4ca3422418c287cbf273934c
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Monitro2Mat
+    second: {fileID: 2100000, guid: 354c2a3852be29d4c9efabde5cfc1ff0, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
