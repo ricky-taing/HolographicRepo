@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using NueGames.NueDeck.Scripts.Card;
 using NueGames.NueDeck.Scripts.Data.Collection;
 using NueGames.NueDeck.Scripts.Data.Containers;
+using NueGames.NueDeck.Scripts.Managers;
 using NueGames.NueDeck.Scripts.Enums;
 using NueGames.NueDeck.Scripts.NueExtentions;
 using UnityEngine;
+using TMPro;
 
 namespace NueGames.NueDeck.Scripts.UI.Reward
 {
@@ -20,7 +22,9 @@ namespace NueGames.NueDeck.Scripts.UI.Reward
         [SerializeField] private Transform choice2DCardSpawnRoot;
         [SerializeField] private ChoiceCard choiceCardUIPrefab;
         [SerializeField] private ChoicePanel choicePanel;
+        [SerializeField] private TextMeshProUGUI bitsRemaining;
         
+
         private readonly List<RewardContainer> _currentRewardsList = new List<RewardContainer>();
         private readonly List<ChoiceCard> _spawnedChoiceList = new List<ChoiceCard>();
         private readonly List<CardData> _cardRewardList = new List<CardData>();
@@ -63,6 +67,7 @@ namespace NueGames.NueDeck.Scripts.UI.Reward
 
         public override void ResetCanvas()
         {
+            
             ResetRewards();
 
             ResetChoice();
