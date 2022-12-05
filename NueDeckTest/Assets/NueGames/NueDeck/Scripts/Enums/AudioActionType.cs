@@ -12,6 +12,7 @@
         Heal,
         Poison,
         Power,
-        Swing
+        Swing,
+        MusicType
     }
 }

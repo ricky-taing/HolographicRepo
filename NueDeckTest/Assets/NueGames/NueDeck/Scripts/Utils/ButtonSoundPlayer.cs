@@ -19,6 +19,6 @@ namespace NueGames.NueDeck.Scripts.Utils
             _btn.onClick.AddListener(PlayButton);
         }
         
-        public void PlayButton() => AudioManager.PlayOneShotButton(SoundProfileData.GetRandomClip());
+        public void PlayButton() => AudioManager.PlayOneShotButton(soundProfileData.GetRandomClip());
     }
 }
